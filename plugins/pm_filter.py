@@ -548,12 +548,43 @@ async def cb_handler(client: Client, query: CallbackQuery):
         monsize = await db.get_db_size()
         free = 536870912 - monsize
         monsize = get_size(monsize)
-        free = get_size(free)
+elif query.data == "help":
+        buttons = [[
+            InlineKeyboardButton('🎗️Group [01]', url='https://t.me/+WzsvFY3qXa9kZGVl'),
+            InlineKeyboardButton('🎗️Group [02]', url='https://t.me/+EdJU1Hqk1N80ZWQ1')
+        ], [
+            InlineKeyboardButton('🔅 Marvel', url='https://t.me/MarvelRiders'),
+            InlineKeyboardButton('🔅 DC', url='https://t.me/DCknights')
+        ], [
+            InlineKeyboardButton('🔙 BACK', callback_data='start'),
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "about":
+        buttons = [[
+            InlineKeyboardButton('🔙 BACK', callback_data='start'),
+         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ABOUT_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "source":
+        buttons = [[
+            InlineKeyboardButton('🔙 BACK', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.SOURCE_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
