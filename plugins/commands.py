@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('❓How To Use Me❓', url='https://t.me/HeroFlix/1452')
+                InlineKeyboardButton('❓How To Use Me❓', url='https://t.me/HeroFlix/223')
             ]
                ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -41,7 +41,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Group ➕', callback_data='about')
         ], [
-            InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlix/1452'),
+            InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlix/223'),
         ], [            
             InlineKeyboardButton('🗳 Help', callback_data='help'),
             InlineKeyboardButton('🔅 Group', url='https://t.me/+EdJU1Hqk1N80ZWQ1'),
@@ -87,7 +87,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Group ➕', callback_data='about')
         ], [
-            InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlix/1452'),
+            InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlix/223'),
         ], [            
             InlineKeyboardButton('🗳 Help', callback_data='help'),
             InlineKeyboardButton('🔅 Group', url='https://t.me/+EdJU1Hqk1N80ZWQ1'),
