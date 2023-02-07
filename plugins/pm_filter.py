@@ -80,7 +80,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/1452')
+            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/223')
         ]
     )
 
@@ -405,7 +405,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Group ➕', callback_data='about')
         ], [
-            InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlix/1452'),
+            InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlix/223'),
         ], [            
             InlineKeyboardButton('🗳 Help', callback_data='help'),
             InlineKeyboardButton('🔅 Group', url='https://telegram.me/+EdJU1Hqk1N80ZWQ1'),
@@ -532,7 +532,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/1452')
+            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/223')
         ]
     )
 
