@@ -706,7 +706,7 @@ async def global_filters(client, message, text=False):
                         )
                     else:
                         button = eval(btn)
-                        await message.reply(
+                        await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
