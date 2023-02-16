@@ -26,8 +26,11 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-    gf = await global_filters(client, message)
-    if gf == False:
+    k = await global_filters(client, message)
+    if SELF_DELETE:
+                await asyncio.sleep(SELF_DELETE_SECONDS)
+                await k.delete()
+    if k == False:
         await auto_filter(client, message)
 
 @Client.on_callback_query(filters.regex(r"^next"))
